@@ -1,7 +1,6 @@
 #ifndef H_DISPLAY 
 #define H_DISPLAY 
 
-#include "colors.h"
 #include "graph.h"
 #include "map.h"
 
