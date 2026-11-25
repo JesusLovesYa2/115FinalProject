@@ -1,6 +1,7 @@
 #include "graph.h"
 #include "display.h"
 #include "util.h"
+#include "algo.h"
 
 #include <iostream>
 
