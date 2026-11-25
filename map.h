@@ -9,7 +9,7 @@ class Map {
 	
 public:
 	Map(ifstream inputFile) {//Make a map from a input file
-
+		
 	}
 
 	~Map() {
