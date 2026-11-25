@@ -1,7 +1,10 @@
 #include "util.h"//For the matrix
 #include <fstream>//To read in files
+#include <iostream>//Let's us do outputs for tests
+#include <string>//Makes it easier to read the file
 
 /*
+Symbols and meanings for the map
 ^=mountain, .=desert, "=forest, =plain(space), ~=water
 */
 class Map {
@@ -9,7 +12,26 @@ class Map {
 	
 public:
 	Map(ifstream inputFile) {//Make a map from a input file
+		//We have a decision to make, 1.Make the Map grow dynamicly while reading or 2. Make a bigger map than we need and fill it in as we go.
+		inputFile.open("map1.txt", ifstream::in);
+		if (!inFile.is_open()) {
+			std::cout<<"File did not open, using a default matrix"<<std::endl;
+			//TODO default matrix here
+		}
+		std::string s;
+
+		//Use these to to put each char in the right spot
+		int xIndex = 0;
+		int yIndex = 0;
 		
+		while (getline(inputFile,s)){//Read from file into s one line at a time until it can't
+			for(char c : s){//Range based for loop that goes until s is done
+				//grid.set(xIndex,yIndex,c);
+				xIndex++;//Move to the right
+			}
+			xIndex=0;//Back to the first column
+			yIndex++;//Move down one row
+		}
 	}
 
 	~Map() {
