@@ -167,6 +167,10 @@ void mapToGraph(Map m, char character, Graph* g){//The map is our blueprint, the
         
       }else {
           std::cout<< "You entered an invalid character."<<std::endl;
+          //return;//Not sure how to exit here
       }
+
+    //TODO make the graph from the map here
+    m.
     return;
 }
