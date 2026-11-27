@@ -171,6 +171,42 @@ void mapToGraph(Map m, char character, Graph* g){//The map is our blueprint, the
       }
 
     //TODO make the graph from the map here
-    m.
+    char holdForTranslate;//Current tile
+
+    char holdForTranslateN;//Tile north
+    char holdForTranslateW;//Tile west
+    char holdForTranslateE;//Tile east
+    char holdForTranslateS;//Tile south
+    for(int i =0; i<m.get_height(); i++){//Iterate over the height
+        for(int j =0; j<m.get_width(); j++){Iterate over the width
+          //Get nodes and surroundings
+          holdForTranslate = m.get(j, i);
+                                            
+          if(j<=0){//Left is out of the map
+            holdForTranslateW='!';
+          }else{
+            holdForTranslateW=m.get(j-1, i);
+          }
+
+          if(j>=m.get_width()){//Right is out of the map
+            holdForTranslateE='!';
+          }else{
+            holdForTranslateE=m.get(j+1, i);
+          }
+                                            
+          if(i<=0){//Up is out of the map
+            holdForTranslateN='!';
+          }else{
+            holdForTranslateN=m.get(j, i-1);
+          }
+                                            
+          if(j>=m.get_width()){//Down is out of the map
+            holdForTranslateS='!';
+          }else{
+            holdForTranslateS=m.get(j, i+1);
+          }
+
+      //TODO
+    }
     return;
 }
