@@ -206,7 +206,7 @@ void mapToGraph(Map m, char character, Graph* g){//The map is our blueprint, the
             holdForTranslateS=m.get(j, i+1);
           }
 
-      //TODO
+      //TODO make graph using insert and connect
     }
     return;
 }
